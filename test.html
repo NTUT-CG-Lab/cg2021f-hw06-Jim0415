@@ -138,6 +138,8 @@
 					mesh = new THREE.Mesh( geometry, material );
 
 					//mesh.position.set( -0.5, -0.5, 0 );
+					console.log(mesh)
+					mesh.rotation.x = - Math.PI / 2;
 					mesh.position.set( 0, 0, 0 );
 					//mesh.scale.multiplyScalar( 1.5 );
 					mesh.scale.multiplyScalar( 0.5 );
@@ -146,7 +148,7 @@
 					scene.add( mesh );
 
 				} );
-				
+	
 				// The material for pytorch3d model
 				const material = new THREE.MeshPhongMaterial( { color: 0xAAAAAA, specular: 0x111111, shininess: 200 } );
 				
@@ -317,10 +319,8 @@
 
 					mesh = new THREE.Mesh( geometry, material );
 
-					//mesh.position.set( -0.5, -0.5, 0 );
-					mesh.position.set( 0, 0, 0 );
-					//mesh.scale.multiplyScalar( 1.5 );
-					mesh.scale.multiplyScalar( 0.5 );
+					mesh.position.set( 0, -0.5, 0 );
+					mesh.scale.multiplyScalar( 1.5 );
 					mesh.castShadow = true;
 					mesh.receiveShadow = true;
 
@@ -338,8 +338,8 @@
 
                     mesh2 = new THREE.Mesh( geometry, material );
 					mesh2.name = element; 
-                    mesh2.position.set( 0, 0, 1.5 );
-					mesh2.scale.multiplyScalar( 0.5 );
+                    mesh2.position.set( 0, -0.5, 1.2 );
+					mesh2.scale.multiplyScalar( 1.5 );
                     mesh2.castShadow = true;
                     mesh2.receiveShadow = true;
 					if( element != 0 )
@@ -367,6 +367,7 @@
 
 				//mesh.position.set( -0.5, -0.5, 0 );
 				mesh.position.set( 0, 0, 0 );
+				mesh.rotation.x = - Math.PI / 2;
 				//mesh.scale.multiplyScalar( 1.5 );
 				mesh.scale.multiplyScalar( 0.5 );
 				mesh.castShadow = true;
