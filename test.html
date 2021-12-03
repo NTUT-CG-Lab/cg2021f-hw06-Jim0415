@@ -254,12 +254,14 @@
 
 				render();
 
+				var e = document.getElementById("aa");
+				order = e.value;
+				
 				if( status != order ){
 					status = order;
 					first_selcet = true;
 				}
-				var e = document.getElementById("aa");
-				order = e.value;
+				
 				switch(order){
 					case "0":
 						if( first_selcet === true ){
